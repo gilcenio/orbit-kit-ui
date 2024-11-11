@@ -1,6 +1,6 @@
 # Orbit Kit UI
 
-`orbit-kit-ui` é uma biblioteca de componentes e utilitários para React Native, projetada para facilitar a criação de interfaces interativas com menus circulares, manipulação de opacidade, e cálculos geométricos.
+`orbit-kit-ui` A modern, versatile React Native component library with smooth animations, responsive layouts, and intuitive design, perfect for building clean and futuristic mobile interfaces.
 
 # MenuApp Component
 
@@ -27,7 +27,7 @@ A customizable and animated menu component for React Native that arranges menu i
 
 To use `MenuApp`, make sure you have the following dependencies installed:
 
-Para usar a biblioteca `orbit-kit-ui`, instale-a juntamente com `react-native-gesture-handler`:
+To use the library `orbit-kit-ui`, install it together with `react-native-gesture-handler`:
 
 ```bash
 npm install orbit-kit-ui react-native-gesture-handler
