@@ -1,0 +1,5 @@
+# Use LF para arquivos de texto
+* text=auto
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
