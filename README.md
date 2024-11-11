@@ -8,7 +8,10 @@ A customizable and animated menu component for React Native that arranges menu i
 
 # Check out this animation!
 
-![Spinning Globe](https://github.com/gilcenio/orbit-kit-ui/blob/main/gifs/video%202.mp4)
+![Spinning Globe](https://github.com/gilcenio/orbit-kit-ui/blob/main/gifs/video%202.gif?raw=true)
+![Spinning Globe](https://github.com/gilcenio/orbit-kit-ui/blob/main/gifs/video%203.gif?raw=true)
+![Spinning Globe](https://github.com/gilcenio/orbit-kit-ui/blob/main/gifs/video%204.gif?raw=true)
+![Spinning Globe](https://github.com/gilcenio/orbit-kit-ui/blob/main/gifs/video%205.gif?raw=true)
 
 
 ## Features
