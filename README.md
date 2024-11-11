@@ -6,6 +6,11 @@
 
 A customizable and animated menu component for React Native that arranges menu items in a circular or semi-circular pattern, providing options for center content, gesture handling, and opacity effects.
 
+# Check out this animation!
+
+![Spinning Globe](https://github.com/gilcenio/orbit-kit-ui/blob/main/gifs/video%202.mp4)
+
+
 ## Features
 
 - **Circular and Semi-Circular Arrangements**: Display menu items around a circular or semi-circular path.
