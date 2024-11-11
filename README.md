@@ -27,36 +27,75 @@ A customizable and animated menu component for React Native that arranges menu i
 
 To use `MenuApp`, make sure you have the following dependencies installed:
 
-To use the library `orbit-kit-ui`, install it together with `react-native-gesture-handler`:
+To use the library `orbit-kit-ui`, install it together with `react-native-gesture-handler`
 
 ```bash
 npm install orbit-kit-ui react-native-gesture-handler
-# ou
+# or
 yarn add orbit-kit-ui react-native-gesture-handler
-
+```
 # Usage
 
 ## Example in TSX
 
 ```tsx
-import React from "react";
-import MenuApp from "./MenuApp";
-import { View } from "react-native";
+import { StatusBar } from 'expo-status-bar';
+import { Pressable, StyleSheet, Text } from 'react-native';
+import MenuApp from './src/MenuApp';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { useState } from 'react';
 
-const App = () => (
-  <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-    <MenuApp
-      isOpenMenu={true}
-      content={[<View style={{ width: 20, height: 20, backgroundColor: "blue" }} />]}
-      coreContent={<View style={{ width: 50, height: 50, backgroundColor: "green" }} />}
-      radiusMenus={1.5}
-      centerRotateContent={true}
-      isOpacityMenu={true}
-    />
-  </View>
-);
 
-export default App;
+export function Item(emoji: string, onPress: () => void): React.JSX.Element {
+  return(
+    <Pressable 
+      onPress={onPress} 
+      style={{
+        width: 50, 
+        height: 50, 
+        backgroundColor: 'white', 
+        borderRadius: 100,
+        justifyContent: "center",
+        alignItems: "center",
+        borderWidth: 0.3
+      }}
+    >
+      <Text style={{fontSize: 24}}>{emoji}</Text>
+    </Pressable>
+  )
+}
+
+export default function App() {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  const content: React.JSX.Element[] = [
+    Item("😁", () => alert("😁")),
+    Item("😒", () => alert("😒")),
+    Item("😊", () => alert("😊")),
+    Item("😂", () => alert("😂"))
+  ]
+
+  return (
+    <GestureHandlerRootView style={styles.container}>
+      <StatusBar style="auto" />
+      <MenuApp
+        coreContent={Item("😂", () => setIsOpen(!isOpen))}
+        content={content}
+        isOpenMenu={isOpen}
+      />
+    </GestureHandlerRootView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+});
+```
 
 # API Reference
 
