@@ -21,7 +21,7 @@ A customizable and animated menu component for React Native that arranges menu i
 3. [API Reference](#api-reference)
 4. [Custom Hooks](#custom-hooks)
 5. [Helper Functions](#helper-functions)
-6. [Contributing](#contributing)
+6. [Author](#author)
 
 ## Installation
 
@@ -141,3 +141,9 @@ Container styles and sizes:
 | `elContainerSizeY`    | `number`          | Height of the container.                                       |
 | `elContainerCoOrdinates` | `IPoint`       | Coordinates of the container center.                           |
 | `backgroundColor`     | `string`          | Background color.   
+
+## Author
+
+© 2024 Gilcenio Santos Vilanova Junior. All rights reserved.
+
+
