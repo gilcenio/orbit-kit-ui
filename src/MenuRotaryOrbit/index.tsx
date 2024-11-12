@@ -124,7 +124,6 @@ const MenuRotaryOrbit = ({
                   position: "absolute",
                   justifyContent: "center",
                   alignItems: "center",
-                  backgroundColor: "red" // Background color of the center content
                 },
                 centerContainerStyle
               ]}
