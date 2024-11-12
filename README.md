@@ -118,13 +118,44 @@ Properties for configuring the `MenuApp` component:
 | `centerContentSize`   | `number`                          | Size of the center content element.                            |
 | `centerContainerStyle`| `ViewStyle & ViewProps`           | Styles for the center content container.                       |
 | `centerRotateContent` | `boolean`                         | Enables rotation of the center content with the menu.          |
-| `animationEntering`   | `[Entering/animations](https://docs.swmansion.com/react-native-reanimated/docs/layout-animations/entering-exiting-animations/)`                             | Animation configuration for menu entry.                        |
-| `animationExiting`    | `[Exiting/animations](https://docs.swmansion.com/react-native-reanimated/docs/layout-animations/entering-exiting-animations/)`                             | Animation configuration for menu exit.                         |
+| `animationEntering`   | [Entering/animations](https://docs.swmansion.com/react-native-reanimated/docs/layout-animations/entering-exiting-animations/)                             | Animation configuration for menu entry.                        |
+| `animationExiting`    | [Exiting/animations](https://docs.swmansion.com/react-native-reanimated/docs/layout-animations/entering-exiting-animations/)                             | Animation configuration for menu exit.                         |
 | `radiusMenus`         | `number`                          | Multiplier for the menu radius.                                |
 | `isOpacityMenu`       | `boolean`                         | Enables an opacity effect overlay.                             |
 | `opacityProps`        | `IOpacityApp`                     | Custom properties for the opacity effect.                      |
 | `isSemicircle`        | `boolean`                         | Configures menu layout as a semi-circle.                       |
 | `actionOpacity`       | `() => void`                      | Function triggered when opacity is pressed.                    |
+
+## Example
+
+```tsx
+<MenuRotaryOrbit
+  isOpenMenu={isOpen}
+  content={content}
+  contentStyles={{
+    marginBottom: 10
+  }}
+  contentItemStyle={{
+    backgroundColor: 'red',
+  }}
+  coreContent={Item("😂", () => setIsOpen(!isOpen))}
+  centerContentSize={10}
+  centerContainerStyle={{
+    backgroundColor: 'green',
+  }}
+  centerRotateContent={false}
+  animationEntering={BounceIn}
+  animationExiting={BounceOut}
+  radiusMenus={1.5}
+  isOpacityMenu={true}
+  opacityProps={{
+    opacity: 0.9,
+    color: 'black'
+  }}
+  isSemicircle={false}
+  actionOpacity={() => setIsOpen(!isOpen)}
+/>
+```
 
 ## IOpacityApp
 
@@ -135,17 +166,16 @@ Properties for managing opacity effects:
 | `color`               | `string`      | Optional background color.                                     |
 | `opacity`             | `0-1`         | Opacity level between 0 and 1.                                 |
 
-## IStylesheet
+## Example
 
-Container styles and sizes:
-
-| Property              | Type              | Description                                                    |
-|-----------------------|-------------------|----------------------------------------------------------------|
-| `size`                | `number`          | Size of the component.                                         |
-| `elContainerSizeX`    | `number`          | Width of the container.                                        |
-| `elContainerSizeY`    | `number`          | Height of the container.                                       |
-| `elContainerCoOrdinates` | `IPoint`       | Coordinates of the container center.                           |
-| `backgroundColor`     | `string`          | Background color.   
+```tsx
+<MenuRotaryOrbit
+  opacityProps={{
+    opacity: 0.6,
+    color: 'black'
+  }}
+/>
+```
 
 ## Author
 
