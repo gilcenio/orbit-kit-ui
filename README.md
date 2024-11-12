@@ -2,7 +2,7 @@
 
 `orbit-kit-ui` A modern, versatile React Native component library with smooth animations, responsive layouts, and intuitive design, perfect for building clean and futuristic mobile interfaces.
 
-# MenuApp Component
+# MenuRotaryOrbit Component
 
 A customizable and animated menu component for React Native that arranges menu items in a circular or semi-circular pattern, providing options for center content, gesture handling, and opacity effects.
 
@@ -26,20 +26,18 @@ A customizable and animated menu component for React Native that arranges menu i
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [API Reference](#api-reference)
-4. [Custom Hooks](#custom-hooks)
-5. [Helper Functions](#helper-functions)
-6. [Author](#author)
+3. [Author](#author)
 
 ## Installation
 
-To use `MenuApp`, make sure you have the following dependencies installed:
+To use `MenuRotaryOrbit`, make sure you have the following dependencies installed:
 
-To use the library `orbit-kit-ui`, install it together with `react-native-gesture-handler`
+To use the library `orbit-kit-ui`, install it together with `react-native-gesture-handler`  and  `react-native-reanimated`
 
 ```bash
-npm install orbit-kit-ui react-native-gesture-handler
+npm i orbit-kit-ui
 # or
-yarn add orbit-kit-ui react-native-gesture-handler
+yarn add orbit-kit-ui
 ```
 # Usage
 
@@ -120,8 +118,8 @@ Properties for configuring the `MenuApp` component:
 | `centerContentSize`   | `number`                          | Size of the center content element.                            |
 | `centerContainerStyle`| `ViewStyle & ViewProps`           | Styles for the center content container.                       |
 | `centerRotateContent` | `boolean`                         | Enables rotation of the center content with the menu.          |
-| `animationEntering`   | `any`                             | Animation configuration for menu entry.                        |
-| `animationExiting`    | `any`                             | Animation configuration for menu exit.                         |
+| `animationEntering`   | `[Entering/animations](https://docs.swmansion.com/react-native-reanimated/docs/layout-animations/entering-exiting-animations/)`                             | Animation configuration for menu entry.                        |
+| `animationExiting`    | `[Exiting/animations](https://docs.swmansion.com/react-native-reanimated/docs/layout-animations/entering-exiting-animations/)`                             | Animation configuration for menu exit.                         |
 | `radiusMenus`         | `number`                          | Multiplier for the menu radius.                                |
 | `isOpacityMenu`       | `boolean`                         | Enables an opacity effect overlay.                             |
 | `opacityProps`        | `IOpacityApp`                     | Custom properties for the opacity effect.                      |
